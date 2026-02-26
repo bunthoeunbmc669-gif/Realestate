@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropertyExpert - វិនិយោគលើដីឡូត៍ដ៏មានសក្ដានុពល</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("file:///C:/Users/LYHENG/Downloads/632066975_881030454778857_6693206222987421321_n.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- របារម៉ឺនុយ (Navbar) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-green-600 flex items-center">
+                        <i data-lucide="map-pin" class="mr-2"></i> ដីឡូត៍លំនៅឋានក្រុងសិរីសោភ័ណ
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-green-600 transition">ទំព័រដើម</a>
+                    <a href="#projects" class="text-gray-600 hover:text-green-600 transition">គម្រោង</a>
+                    <a href="#about" class="text-gray-600 hover:text-green-600 transition">អំពីយើង</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 transition">ទំនាក់ទំនង</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ផ្នែកខាងលើ (Hero Section) -->
+    <header class="hero-gradient h-[600px] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">វិនិយោគលើដីឡូត៍ថ្ងៃនេះ <br><br>ដើម្បីអនាគតដ៏រុងរឿង</h1>
+            <p class="text-lg md:text-xl mb-8 font-light text-gray-200">យើងផ្តល់ជូននូវដីឡូត៍ដែលមានសក្តានុពលខ្ពស់ ទីតាំងល្អបំផុត សម្រាប់រស់នៅ និងប្រកបអាជីវកម្ម។</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition">មើលគម្រោងឥឡូវនេះ</a>
+                <a href="#contact" class="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition">ប្រឹក្សាយោបល់ឥតគិតថ្លៃ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ផ្នែកស្វែងរក (Search Filter) -->
+    <div class="max-w-5xl mx-auto -mt-12 relative z-10 bg-white p-6 rounded-xl shadow-xl flex flex-wrap gap-4 items-end">
+        <div class="flex-1 min-w-[200px]">
+            <label class="block text-sm font-medium text-gray-700 mb-1">ជ្រើសរើសទីតាំង</label>
+            <select class="w-full border-gray-200 border p-2 rounded-md focus:ring-green-500 focus:border-green-500 outline-none">
+                <option>គម្រោងទី១</option>
+                <option>គម្រោងទី២</option>
+                <option>គម្រោងទី៣</option>
+				<option>គម្រោងទី៤</option>
+                <option>គម្រោងទី៥</option>
+                <option>គម្រោងទី៦</option>
+				<option>គម្រោងទី៧</option>
+                <option>គម្រោងទី៨</option>
+                <option>គម្រោងទី៩</option>
+				<option>គម្រោងទី១០</option>
+                <option>គម្រោងទី១១</option>
+                <option>គម្រោងទី១២</option>
+				<option>គម្រោងទី១៣</option>
+                <option>គម្រោងទី១៤</option>
+                <option>គម្រោងទី១៥</option>
+				<option>គម្រោងទី១៦</option>
+                <option>គម្រោងទី១៧</option>
+                <option>គម្រោងទី១៨</option>
+				<option>គម្រោងទី១៩</option>
+                <option>គម្រោងទី២០</option>
+                <option>គម្រោងទី២១</option>
+				<option>គម្រោងទី២២</option>
+                <option>គម្រោងទី២៣</option>
+                <option>គម្រោងទី២៤</option>
+            </select>
+        </div>
+        <div class="flex-1 min-w-[200px]">
+            <label class="block text-sm font-medium text-gray-700 mb-1">កម្រិតតម្លៃ</label>
+            <select class="w-full border-gray-200 border p-2 rounded-md focus:ring-green-500 focus:border-green-500 outline-none">
+                <option>$3,500 - $5,500</option>
+                <option>$8,000 - $12,000</option>
+                <option>លើសពី $12,000</option>
+            </select>
+        </div>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 flex items-center">
+            <i data-lucide="search" class="w-4 h-4 mr-2"></i> ស្វែងរក
+        </button>
+    </div>
+
+    <!-- ផ្នែកគម្រោង (Projects Section) -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">គម្រោងដីឡូត៍ពិសេសៗ</h2>
+            <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- ឡូត៍ទី១ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                    <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P25/P25.jpg" alt="Land Lot 1" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">លក់ដាច់ខ្លាំង</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី២៥</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិដីឡូត៍, សង្កាត់ទឹថ្លា, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $50/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> ប្លង់រឹងកាត់ឈ្មោះ
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+
+            <!-- ឡូត៍ទី២ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                    <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P24/P24.jpg" alt="Land Lot 2" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ក្បែរមាត់ទឹកទេសភាពស្អាត</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី២៤</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិដីឡូត៍, សង្កាត់ទឹកថ្លា, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$4,500</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ 50$/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> ប្លង់រឹងកាត់ឈ្មោះ
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+
+            <!-- ឡូត៍ទី៣ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P21/P21.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ក្បែរផ្លូវ៣០ម៉ែត្រ(ផ្លូវ៧មករា)</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី២១</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ក្បែរផ្លូវ៧មករា, ភូមិខ្លាកូនថ្មី, សង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$12,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់ផ្តាច់ចុះ $4,000</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៤,២ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> បង្កាន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+       
+		    <!-- ឡូត៍ទី៤ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P23/P23.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ជាប់ស្រះទឹកលំហែ</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី២៣</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិដីឡូត៍, សង្កាត់ទឹកថ្លា, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $50/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២៥ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> ប្លង់រឹងកាត់ឈ្មោះ
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+        
+            <!-- ឡូត៍ទី៥ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P22/P22.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">មានមនុស្សរស់នៅច្រើន</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី២២</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិដីឡូត៍, សង្កាត់ទឹកថ្លា, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $50/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> ប្លង់រឹងកាត់ឈ្មោះ
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+        
+	        <!-- ឡូត៍ទី៦ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P20/P20.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ជាប់ស្រះទឹកលំហែ</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី២០</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិដីឡូត៍, សង្កាត់ទឹកថ្លា, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $50/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២៣ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> ប្លង់រឹងកាត់ឈ្មោះ
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+			<!-- ឡូត៍ទី៧ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P19/P19.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">មានផ្ទះសាងសង់ច្រើន</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី១៩</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិដីឡូត៍ និងខ្លាកូនថ្មី, សង្កាត់ទឹកថ្លា និងសង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $100/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> ប្លង់រឹងកាត់ឈ្មោះ និងបង្កន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+        
+            <!-- ឡូត៍ទី៨ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P18/P18.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ក្បែរទេសភាពជើងភ្នំ</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី១៨</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិខ្លាកូនថ្មី, សង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$4,500</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $100/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> បង្កាន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+        
+	        <!-- ឡូត៍ទី៩ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P17/P17.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ក្បែរទេសភាពជើងភ្នំ</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី១៧</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិខ្លាកូនថ្មី, សង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$6,500</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $100/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២៦ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> បង្កាន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+			
+			<!-- ឡូត៍ទី១០ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P16/P16-Full.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">មានសួនកំសាន្ត</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី១៦</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិខ្លាកូនថ្មី, សង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$4,500</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $100/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> បង្កាន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+        
+	        <!-- ឡូត៍ទី១១ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P15/P15.pub-1.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">មានមនុស្សរស់នៅកុះករ</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី១៥</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិខ្លាកូនថ្មី, សង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,500</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $100/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> បង្កាន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+			
+			<!-- ឡូត៍ទី១២ -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition transform hover:-translate-y-2">
+                <div class="relative">
+                   <img src="file:///Z:/2-%E1%9E%94%E1%9F%92%E1%9E%9B%E1%9E%84%E1%9F%8B/P14/P14-Full-1.jpg" alt="Land Lot 3" class="w-full h-56 object-cover">
+                    <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full uppercase font-bold">ក្បែរទេសភាពជើងភ្នំ</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">គម្រោងទី១៤</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex items-center">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ភូមិខ្លាកូនថ្មី, សង្កាត់កំពង់ស្វាយ, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ
+                    </p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-2xl font-bold text-green-600">$5,000</span>
+                        <span class="text-gray-400 text-sm italic">បង់រំលស់ $100/ខែ</span>
+                    </div>
+                    <div class="flex gap-4 border-t pt-4">
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="maximize" class="w-4 h-4 mr-1 text-green-600"></i> ៥ម x ២០ម
+                        </div>
+                        <div class="flex items-center text-gray-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1 text-green-600"></i> បង្កាន់ដៃប្លង់រឹង
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-green-600 hover:text-white transition">មើលព័ត៌មានលម្អិត</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ផ្នែកប្លង់មេ (Master Plan Visual) -->
+    <section class="bg-green-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">ប្លង់មេអន្តរកម្ម</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">អតិថិជនអាចមើលឃើញទីតាំងជាក់លាក់នៃឡូត៍នីមួយៗតាមរយៈប្រព័ន្ធប្លង់មេឌីជីថលរបស់យើង។ អ្នកអាចដឹងថាឡូត៍ណាដែលនៅទំនេរ និងឡូត៍ណាដែលត្រូវបានកក់រួចហើយ។</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center text-gray-700">
+                        <span class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center mr-3"><i data-lucide="check" class="w-5 h-5 text-green-600"></i></span>
+                        ព័ត៌មានជាក់ស្តែង ធ្វើបច្ចុប្បន្នភាពរៀងរាល់ម៉ោង
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <span class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center mr-3"><i data-lucide="check" class="w-5 h-5 text-green-600"></i></span>
+                        ងាយស្រួលជ្រើសរើសទីតាំងតាមតម្រូវការ
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <span class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center mr-3"><i data-lucide="check" class="w-5 h-5 text-green-600"></i></span>
+                        បង្ហាញទិដ្ឋភាពជុំវិញ ផ្សារ សាលារៀន និងរោងចក្រ
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-2xl">
+                <!-- គ្រាន់តែជាការបង្ហាញប្លង់គំរូ -->
+                <div class="grid grid-cols-5 gap-2 h-64">
+                    <div class="bg-yellow-200 rounded text-[10px] flex items-center justify-center border border-red-300">A1 (Sold)</div>
+                    <div class="bg-green-100 rounded text-[10px] flex items-center justify-center border border-green-300 cursor-pointer hover:bg-green-200">A2</div>
+                    <div class="bg-yellow-200 rounded text-[10px] flex items-center justify-center border border-red-300">A3 (Sold)</div>
+                    <div class="bg-green-100 rounded text-[10px] flex items-center justify-center border border-green-300 cursor-pointer hover:bg-green-200">A4</div>
+                    <div class="bg-green-100 rounded text-[10px] flex items-center justify-center border border-green-300 cursor-pointer hover:bg-green-200">A5</div>
+                    <div class="bg-yellow-200 rounded text-[10px] flex items-center justify-center border border-red-300">B1 (Sold)</div>
+                    <div class="bg-yellow-200 rounded text-[10px] flex items-center justify-center border border-red-300">B2 (Sold)</div>
+                    <div class="bg-green-100 rounded text-[10px] flex items-center justify-center border border-green-300 cursor-pointer hover:bg-green-200">B3</div>
+                    <div class="bg-green-100 rounded text-[10px] flex items-center justify-center border border-green-300 cursor-pointer hover:bg-green-200">B4</div>
+                    <div class="bg-yellow-200 rounded text-[10px] flex items-center justify-center border border-red-300">B5 (Sold)</div>
+                </div>
+                <div class="mt-4 flex justify-between text-sm">
+                    <span class="flex items-center"><span class="w-4 h-4 bg-green-100 border border-green-300 mr-2"></span> នៅទំនេរ</span>
+                    <span class="flex items-center"><span class="w-4 h-4 bg-yellow-200 border border-red-300 mr-2"></span> លក់រួច</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ផ្នែកទម្រង់ទំនាក់ទំនង (Contact Form) -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="bg-green-900 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row gap-12 text-white">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6">ទំនាក់ទំនងមកយើងឥឡូវនេះ</h2>
+                <p class="text-green-100 mb-10 text-lg">តើអ្នកមានចម្ងល់ ឬចង់ទទួលបានការប្រឹក្សាពីអ្នកជំនាញរបស់យើងមែនទេ? បំពេញព័ត៌មានខាងក្រោម យើងនឹងទាក់ទងទៅលោកអ្នកវិញយ៉ាងឆាប់រហ័ស។</p>
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <i data-lucide="phone" class="w-6 h-6 mr-4 text-green-400"></i>
+                        <span>+855 97 810 0009 / +855 96 366 1669 / +855 78 450 021</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="mail" class="w-6 h-6 mr-4 text-green-400"></i>
+                        <span>bunthoeunbmc669@gmail.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="map-pin" class="w-6 h-6 mr-4 text-green-400"></i>
+                        <span>ផ្លូវ៧មករា, ភូមិដីឡូត៍, សង្កាត់ទឹកថ្លា, ក្រុងសិរីសោភ័ណ, ខេត្តបន្ទាយមានជ័យ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 bg-white p-8 rounded-3xl text-gray-800 shadow-2xl">
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">ឈ្មោះពេញ</label>
+                        <input type="text" placeholder="បញ្ចូលឈ្មោះរបស់អ្នក" class="w-full border p-3 rounded-lg outline-none focus:border-green-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">លេខទូរសព្ទ</label>
+                        <input type="tel" placeholder="បញ្ចូលលេខទូរសព្ទ" class="w-full border p-3 rounded-lg outline-none focus:border-green-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">សារ</label>
+                        <textarea rows="4" placeholder="តើអ្នកចង់ដឹងអ្វីខ្លះ?" class="w-full border p-3 rounded-lg outline-none focus:border-green-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 text-white py-4 rounded-lg font-bold hover:bg-green-700 transition shadow-lg">ផ្ញើសារឥឡូវនេះ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ផ្នែកខាងក្រោម (Footer) -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <span class="text-2xl font-bold text-white flex items-center">
+                    <i data-lucide="map-pin" class="mr-2 text-green-500"></i> ដីឡូត៍លំនៅឋានក្រុងសិរីសោភ័ណ
+                </span>
+            </div>
+            <p class="mb-8">ទំនុកចិត្ត និងភាពស្មោះត្រង់ គឺជាមូលដ្ឋានគ្រឹះនៃសេវាកម្មរបស់យើង។</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-green-500 transition"><i data-lucide="facebook"></i></a>
+                <a href="#" class="hover:text-green-500 transition"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-green-500 transition"><i data-lucide="twitter"></i></a>
+                <a href="#" class="hover:text-green-500 transition"><i data-lucide="send"></i></a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p>&copy; 2026 រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ លោកសែត ប៊ុនធឿន</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // បើកដំណើរការ Lucide Icons
+        lucide.createIcons();
+
+        // មុខងារផ្ញើទម្រង់ទំនាក់ទំនង (Mockup)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-full shadow-2xl z-50';
+            messageBox.innerHTML = 'សាររបស់អ្នកត្រូវបានផ្ញើដោយជោគជ័យ! យើងនឹងទាក់ទងទៅវិញឆាប់ៗ។';
+            document.body.appendChild(messageBox);
+            
+            setTimeout(() => {
+                messageBox.remove();
+            }, 3000);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
